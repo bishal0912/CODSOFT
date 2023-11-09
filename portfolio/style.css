@@ -1,0 +1,643 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-gap: 10vh;
+    grid-template-areas:
+        "n n n n n n n"
+        ". a a a i i i"
+        ". . . am . . ."
+        "b b b p p p p"
+        ". . . s . . ."
+        ". ht . a1 a1 a1 a1"
+        ". cs . b2 b2 b2 b2"
+        ". js . c3 c3 c3 c3"
+        ". ph . d4 d4 d4 d4"
+        ". ja . e5 e5 e5 e5"
+        ". cp . f6 f6 f6 f6"
+        ". py . g7 g7 g7 g7"
+        ". ms . h8 h8 h8 h8"
+        "pr pr pr pr pr pr pr"
+        "ap ap ap ap ap ap ap"
+        ". . e e e . . "
+        ". ex ex ex ex ex ."
+        ". . . c . . ."
+        "ci ci ci . ct ct ct"
+        "copy copy copy copy copy copy copy"
+
+    ;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    background: #ededed;
+    grid-area: n;
+}
+
+
+label.logo {
+    font-size: 40px;
+    color: rgb(59, 59, 59);
+    margin: 0 100px;
+    line-height: 80px;
+    font-family: cursive;
+
+}
+
+.logoName {
+    color: rgb(255, 72, 90);
+    font-family: cursive;
+}
+
+nav ul {
+    float: right;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #707070;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 72, 90);
+}
+
+#checkbtn {
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
+    font-size: 30px;
+    color: rgb(255, 72, 90);
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~ul {
+    right: 0;
+}
+
+@media(max-width: 1077px) {
+    #checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        width: 50%;
+        height: auto;
+        background-color: rgb(196, 196, 196);
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        transition: 0.7s;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        line-height: 50px;
+        margin: 20px;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-gap: 10vh;
+        grid-template-areas:
+            "n n"
+            "a i"
+            "am am"
+            "b p"
+            "s s"
+            "ht a1"
+            "cs b2"
+            "js c3"
+            "ph d4"
+            "ja e5"
+            "cp f6"
+            "py g7"
+            "ms h8"
+            "pr pr"
+            "ap ap"
+            "e e"
+            "ex ex"
+            "c c"
+            "ci ct"
+            "copy copy"
+
+        ;
+    }
+
+    .aboutContainer {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .designer {
+        text-align: center;
+    }
+
+}
+
+@media(max-width:750px) {
+    label.logo {
+        font-size: 30px;
+        margin: 0px 50px;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-gap: .2rm;
+        grid-template-areas:
+            "n"
+            "a"
+            "i"
+            "am"
+            "b"
+            "p"
+            "s"
+            "ht"
+            "a1"
+            "cs"
+            "b2"
+            "js"
+            "c3"
+            "ph"
+            "d4"
+            "ja"
+            "e5"
+            "cp"
+            "f6"
+            "py"
+            "g7"
+            "ms"
+            "h8"
+            "pr"
+            "ap"
+            "e"
+            "ex"
+            "c"
+            "ci"
+            "ct"
+            "copy"
+
+        ;
+    }
+
+    .aboutContainer {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .all-projects{
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 30%;
+    }
+    .pr-el{
+        margin-bottom: 10%;
+        border-radius: 10px;
+    }
+    
+}
+@media(max-width:318px) {
+    label.logo {
+        font-size: 25px;
+        margin: 0px 20px;
+    }
+}
+
+
+/* --------------- body ------------------ */
+
+.helloText {
+    font-size: 15px;
+    font-weight: 900;
+    font-family: fantasy;
+
+}
+
+.nameText {
+    font-size: 60px;
+    font-weight: 800;
+
+}
+
+.about_data {
+    font-weight: 100;
+}
+
+.aboutContainer {
+    grid-area: a;
+    padding-top: 20%;
+    color: rgb(59, 59, 59);
+    text-align: left;
+}
+
+.imgContainer {
+    grid-area: i;
+    padding-top: 10%;
+}
+
+.btnDownloadCv {
+    height: 45px;
+    width: 150px;
+    color: #fff;
+    background-color: rgb(255, 72, 90);
+    border: none;
+    cursor: pointer;
+}
+
+/* -------------------- about -------------------- */
+.imgBoy {
+    grid-area: b;
+    padding-top: 10%;
+    justify-content: center;
+}
+
+.aboutPersonal {
+    grid-area: p;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+.about_Me {
+    font-size: 45px;
+    font-weight: 800;
+    grid-area: am;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 72, 90);
+}
+
+.about_Me1 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.about_data_ {
+    font-weight: 300;
+    padding: 0px 10%;
+}
+
+/* ------------------------ skill -------------------------- */
+
+.skill {
+    grid-area: s;
+    font-size: 45px;
+    font-weight: 800;
+    color: rgb(59, 59, 59);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 72, 90);
+}
+
+.html {
+    grid-area: ht;
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+.css {
+    grid-area: cs;
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+.javascript {
+    grid-area: js;
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+.photoshop {
+    grid-area: ph;
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+.java {
+    grid-area: ja;
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+.cpp {
+    grid-area: cp;
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+.python {
+    grid-area: py;
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+.mysql {
+    grid-area: ms;
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+
+.html1 {
+    grid-area: a1;
+    color: rgb(59, 59, 59);
+    font-weight: 300;
+    padding-top: 5%;
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.css1 {
+    grid-area: b2;
+    color: rgb(59, 59, 59);
+    font-weight: 300;
+    padding-top: 5%;
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.javascript1 {
+    grid-area: c3;
+    color: rgb(59, 59, 59);
+    font-weight: 300;
+    padding-top: 5%;
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.photoshop1 {
+    grid-area: d4;
+    color: rgb(59, 59, 59);
+    font-weight: 300;
+    padding-top: 5%;
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.java1 {
+    grid-area: e5;
+    color: rgb(59, 59, 59);
+    font-weight: 300;
+    padding-top: 5%;
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.cpp1 {
+    grid-area: f6;
+    color: rgb(59, 59, 59);
+    font-weight: 300;
+    padding-top: 5%;
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.python1 {
+    grid-area: g7;
+    color: rgb(59, 59, 59);
+    font-weight: 300;
+    padding-top: 5%;
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.mysql1 {
+    grid-area: h8;
+    color: rgb(59, 59, 59);
+    font-weight: 300;
+    padding-top: 5%;
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+#skills:hover {
+    padding-top: 10%;
+    transition: 1s;
+}
+
+/* ------------------------ projects -------------------------- */
+
+.projects{
+    grid-area: pr;
+    font-size: 45px;
+    font-weight: 800;
+    color: rgb(59, 59, 59);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 72, 90);
+}
+
+.all-projects{
+    grid-area: ap;
+    display: flex;
+    height: 120%;
+    width: 100%;
+}
+
+.pr-el{
+    height: 90%;
+    width: 70%;
+    background: #f0f0f0;
+}
+.pr-img {
+    display: flex;
+    justify-content: center;
+}
+.pr-img img{
+    box-shadow: 2px 2px 5px rgb(205, 205, 205);
+    margin-top: 5%;
+}
+.pr-name{
+    text-align: center;
+    margin-top: 2%;
+    color: rgb(59, 59, 59);
+    font-size: large;
+    font-weight: 800;
+    padding-bottom: 5%;
+}
+.pr-desc{
+    text-align: center;
+    padding-bottom: 5%;
+    font-weight: 300;
+    padding: 0px 5%;
+}
+.pr-link{
+    text-align: center;
+    padding-top: 2%;
+}
+.pr-link a{
+    text-decoration: none;
+    color: rgb(255, 72, 90);
+    font-size: large;
+}
+.pr-link a:hover{
+    font-size: x-large;
+}
+#pr1{
+    grid-area: pr1;
+}
+#pr2{
+    grid-area: pr2;
+}
+#pr3{
+    grid-area: pr3;
+}
+
+/* ------------------------ experiance -------------------------- */
+.experiance {
+    font-size: 45px;
+    font-weight: 800;
+    color: rgb(59, 59, 59);
+    grid-area: e;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 72, 90);
+    margin-top: 15%;
+}
+
+.exp-year {
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(255, 72, 90);
+}
+
+.exp-des {
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+}
+
+.exp-abt {
+    font-weight: 300;
+    color: rgb(59, 59, 59);
+}
+
+.designer {
+    grid-area: ex;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding: 0px 50px;
+    justify-content: center;
+}
+
+
+/* ------------------------ Contact -------------------------- */
+.contact {
+    font-size: 45px;
+    font-weight: 800;
+    color: rgb(59, 59, 59);
+    grid-area: c;
+    text-align: center;
+    text-decoration:underline;
+    text-decoration-color: rgb(255, 72, 90);
+}
+
+.contact-img {
+    grid-area: ci;
+}
+
+.contact-text {
+    grid-area: ct;
+    color: rgb(59, 59, 59);
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contact-text p {
+    color: rgb(255, 72, 90);
+}
+
+.contact-text span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #707070;
+}
+
+.contact-text span:hover {
+    color: rgb(59, 59, 59);
+}
+
+.contact-text pre {
+    padding: 20px;
+}
+
+.contact-text pre a {
+    text-decoration: none;
+}
+
+.contact-text pre img {
+    cursor: pointer;
+}
+
+.contact-text pre img:hover {
+    transform: scale(1.5);
+    transition: .3s;
+}
+
+/* ------------------------ Copyright -------------------------- */
+.copyright{
+    grid-area: copy;
+    color: rgb(59, 59, 59);
+    text-align: center;
+    background-color: #ededed;
+    padding: 4vh 0vh;
+}
